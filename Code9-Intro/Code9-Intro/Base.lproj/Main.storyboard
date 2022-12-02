@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Code9_Intro" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3XG-Kl-M1X">
+                                <rect key="frame" x="174" y="416.66666666666669" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YFv-8p-pEp">
+                                <rect key="frame" x="145" y="487.66666666666674" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eJT-ik-Ilj"/>
+                                    <constraint firstAttribute="width" constant="100" id="uqK-vZ-TCi"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Povecaj"/>
+                                <connections>
+                                    <action selector="tapIncreaseNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="U1H-0j-dfs"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fme-d3-ecB">
+                                <rect key="frame" x="145" y="587.66666666666663" width="100" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="iDv-Va-TBW"/>
+                                    <constraint firstAttribute="height" constant="50" id="lAe-s3-l0G"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Smanji"/>
+                                <connections>
+                                    <action selector="tapDecreaseNumber:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Pd8-dZ-ani"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gPs-ex-7R9">
+                                <rect key="frame" x="147" y="322" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="fme-d3-ecB" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ijh-wv-qyc"/>
+                            <constraint firstItem="3XG-Kl-M1X" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Knc-jf-aml"/>
+                            <constraint firstItem="YFv-8p-pEp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="VFe-93-OwR"/>
+                            <constraint firstItem="3XG-Kl-M1X" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ggc-nZ-Pp8"/>
+                            <constraint firstItem="fme-d3-ecB" firstAttribute="top" secondItem="YFv-8p-pEp" secondAttribute="bottom" constant="50" id="nzv-Cp-Qoi"/>
+                            <constraint firstItem="YFv-8p-pEp" firstAttribute="top" secondItem="3XG-Kl-M1X" secondAttribute="bottom" constant="50" id="vSc-ap-zLn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="counterLabel" destination="3XG-Kl-M1X" id="2s1-Dq-BKh"/>
+                        <outlet property="maxNumberTextField" destination="gPs-ex-7R9" id="lAM-E6-hwA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="98"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
